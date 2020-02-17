@@ -11,14 +11,14 @@ The Jupyter Telemetry Sphinx Extension
 
 To install this extension, run:
 
-.. code-block::
+.. code-block:: bash
 
    pip install jupyter_telemetry_sphinxext
 
 
 Activate the extension by adding ``jupyter_telemetry_sphinxext`` to your ``conf.py`` file.
 
-.. code-block::
+.. code-block:: python
 
    # config.py file.
 
