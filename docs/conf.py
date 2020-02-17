@@ -34,8 +34,8 @@ extensions = [
 
 # -- Telemetry Settings ------------------------------------------------------
 
-jupyter_telemetry_schema_source = "../example-schemas"   # Path is relative to conf.py
-jupyter_telemetry_schema_output = "../example-schemas-docs"           # Path is relative to conf.py
+jupyter_telemetry_schema_source = "../example/example-schemas"   # Path is relative to conf.py
+jupyter_telemetry_schema_output = "../example/example-schemas-docs"           # Path is relative to conf.py
 jupyter_telemetry_index_title = "Example Event Schemas"                # Title of the index page that lists all found schemas.
 
 # ----------------------------------------------------------------------------
