@@ -20,7 +20,6 @@ Activate the extension by adding ``jupyter_telemetry_sphinxext`` to your ``conf.
 
 .. code-block::
 
-
    # config.py file.
 
    extensions = [
