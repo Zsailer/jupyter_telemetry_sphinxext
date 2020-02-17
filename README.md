@@ -7,7 +7,7 @@ and set the following configuration values:
 
 ```python
 # config.py file.
-
+# Add jupyter_telemetry_sphinxext to the extensions list.
 extensions = [
     'jupyter_telemetry_sphinxext',
     ...

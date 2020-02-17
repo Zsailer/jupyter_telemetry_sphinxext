@@ -1,5 +1,6 @@
 import os
 import json
+import shutil
 import pathlib
 import textwrap
 from ruamel.yaml import YAML
@@ -25,13 +26,19 @@ def create_event_schema_docs(app, config):
     src_base_path = pathlib.Path(src)
     out_base_path = pathlib.Path(out)
 
+    # Remove output directory if it exists.
+    try:
+        shutil.rmtree(str(out_base_path))
+    except FileNotFoundError:
+        pass
+
     # Write schema RST files.
     schema_paths = []
     for (base, _, files) in os.walk(src):
         for f in files:
             src_path = pathlib.Path(base).joinpath(f)
             # Verify that the file is a JSON or YAML file, otherwise ignore.
-            if src_path.suffix in ['.json', 'yaml']:
+            if src_path.suffix in ['.json', '.yaml']:
                 rel_path = src_path.relative_to(src_base_path)
                 out_path = out_base_path.joinpath(rel_path)
                 out_path = out_path.with_suffix('.rst')
